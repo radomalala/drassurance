@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { AlertCircle, Phone, CheckCircle, Clock, Award } from 'lucide-react'
+import { useMeta } from '../hooks/useMeta'
 
 export default function Home(){
   const [formData, setFormData] = useState({ nom:'', tel:'', situation:'' })
@@ -11,6 +12,7 @@ export default function Home(){
   }
   return (
     <>
+      {useMeta('Assurance Auto Résilié | La Clinique des Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 2h.")}
       {ok && (
         <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50">
           Merci ! Nous vous rappelons sous 2h.
@@ -25,10 +27,10 @@ export default function Home(){
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               On vous assure<br />
-              <span className="text-urgent-red">AUJOURD'HUI</span>
+              <span className="text-urgent-red">aujourd’hui</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Le seul cabinet qui vous accompagne jusqu'à redevenir un profil standard, année après année.
+              Le seul cabinet qui vous accompagne, année après année, jusqu’à redevenir un profil standard.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/urgence-resiliation" className="bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 shadow-lg transition">

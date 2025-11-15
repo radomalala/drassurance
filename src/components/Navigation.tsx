@@ -17,9 +17,7 @@ export default function Navigation(){
       <nav className="bg-white shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-urgent-red rounded-full flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">+</span>
-            </div>
+            <img src="/logo.svg" alt="La Clinique des Résiliés" className="w-12 h-12" />
             <div>
               <h1 className="text-xl font-bold text-gray-800">LA CLINIQUE</h1>
               <p className="text-xs text-gray-600">des Résiliés</p>

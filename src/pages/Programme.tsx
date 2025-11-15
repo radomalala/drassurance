@@ -1,9 +1,11 @@
 import React from 'react'
+import { useMeta } from '../hooks/useMeta'
 import { CheckCircle } from 'lucide-react'
 
 export default function Programme(){
   return (
     <div className="py-16 px-4">
+      {useMeta('Programme de Réhabilitation Assurantielle en 3 Niveaux', 'Découvrez notre parcours : de résilié à profil standard en 3 niveaux. Accompagnement personnalisé.')}
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Comment fonctionne la réhabilitation assurantielle ?</h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Notre programme unique en France vous accompagne sur 3 niveaux pour passer de profil résilié à conducteur standard</p>

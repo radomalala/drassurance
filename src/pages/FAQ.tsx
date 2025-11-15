@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useMeta } from '../hooks/useMeta'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function FAQ(){
@@ -20,6 +21,7 @@ export default function FAQ(){
   ]
   return (
     <div className="py-16 px-4">
+      {useMeta('FAQ — La Clinique des Résiliés', 'Questions fréquentes sur la résiliation, le malus et notre programme de réhabilitation.')}      
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Questions Fréquentes</h1>
         <p className="text-xl text-center text-gray-600 mb-12">Tout ce que vous devez savoir sur notre programme de réhabilitation</p>

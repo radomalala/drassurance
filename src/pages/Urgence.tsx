@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useMeta } from '../hooks/useMeta'
 
 export default function Urgence(){
   const [f, setF] = useState({ nom:'', tel:'', situation:'' })
@@ -6,11 +7,12 @@ export default function Urgence(){
   const onSubmit = (e:React.FormEvent)=>{e.preventDefault(); setOk(true); setTimeout(()=>setOk(false),4000); setF({nom:'',tel:'',situation:''})}
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-red-50 to-white min-h-screen">
+      {useMeta("Résilié par votre assurance ? Solution sous 2h", "Assurance immédiate après résiliation. Réponse sous 2 heures. Sans engagement.")}
       <div className="max-w-4xl mx-auto text-center">
         {ok && <div className="bg-green-500 text-white px-4 py-2 rounded mb-6 inline-block">Merci ! Nous vous rappelons sous 2h.</div>}
         <div className="mb-8">
           <div className="inline-block bg-urgent-red text-white px-6 py-3 rounded-full text-lg font-bold mb-6 animate-pulse">🚨 URGENCE RÉSILIATION</div>
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">RÉSILIÉ ?<br/><span className="text-urgent-red">On vous assure AUJOURD'HUI</span></h1>
+          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Résilié ?<br/><span className="text-urgent-red">On vous assure aujourd’hui</span></h1>
           <p className="text-2xl text-gray-600 mb-12">Réponse garantie sous 2 heures</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-12">

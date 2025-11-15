@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <defs>
+    <style>
+      .bg{fill:#ffffff;}
+      .ring{fill:#1D3557;}
+      .cross{fill:#E63946;}
+    </style>
+  </defs>
+  <circle cx="64" cy="64" r="62" class="ring"/>
+  <circle cx="64" cy="64" r="54" class="bg"/>
+  <rect x="34" y="58" width="60" height="12" rx="2" class="cross"/>
+  <rect x="58" y="34" width="12" height="60" rx="2" class="cross"/>
+</svg>

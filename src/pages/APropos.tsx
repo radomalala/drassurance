@@ -1,8 +1,10 @@
 import React from 'react'
+import { useMeta } from '../hooks/useMeta'
 
 export default function APropos(){
   return (
     <div className="py-16 px-4">
+      {useMeta('À propos — La Clinique des Résiliés', 'Notre approche : bienveillance, expertise et résultats pour les conducteurs résiliés.')}      
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">La première clinique assurantielle de France</h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Nous avons créé un concept unique: accompagner les conducteurs en difficulté jusqu’à leur réhabilitation complète</p>

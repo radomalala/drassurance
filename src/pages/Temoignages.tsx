@@ -1,4 +1,5 @@
 import React from 'react'
+import { useMeta } from '../hooks/useMeta'
 
 export default function Temoignages(){
   const cards = [
@@ -7,6 +8,7 @@ export default function Temoignages(){
   ]
   return (
     <div className="py-16 px-4 bg-gray-50">
+      {useMeta('Témoignages — Parcours de nos patients', 'Histoires vraies de conducteurs passés de résiliés à profils standards.')}      
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Parcours de nos patients</h1>
         <p className="text-xl text-center text-gray-600 mb-12">Découvrez comment nous avons aidé des conducteurs à retrouver une assurance normale</p>
