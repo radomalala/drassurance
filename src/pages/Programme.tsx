@@ -7,8 +7,8 @@ export default function Programme(){
     <div className="py-16 px-4">
       {useMeta('Programme de Réhabilitation Assurantielle en 3 Niveaux', 'Découvrez notre parcours : de résilié à profil standard en 3 niveaux. Accompagnement personnalisé.')}
       <div className="max-w-5xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Comment fonctionne la réhabilitation assurantielle ?</h1>
-        <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Notre programme unique en France vous accompagne sur 3 niveaux pour passer de profil résilié à conducteur standard</p>
+        <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Comment fonctionne notre programme ?</h1>
+        <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Un accompagnement unique en France pour passer progressivement de « résilié » à « assuré normalement »</p>
 
         <div className="space-y-12">
           {[
@@ -27,9 +27,9 @@ export default function Programme(){
                 </div>
               </div>
               <div className="space-y-4 text-gray-700">
-                <p className="text-lg"><strong>Qui est concerné ?</strong> Conducteurs selon niveau et historique.</p>
-                <p className="text-lg"><strong>Durée :</strong> variable selon votre profil</p>
-                <p className="text-lg"><strong>Prix moyen :</strong> évolutif par niveau</p>
+                <p className="text-lg"><strong>Qui est concerné ?</strong> Conducteurs en situation difficile : résiliation, refus multiples, malus important.</p>
+                <p className="text-lg"><strong>Durée :</strong> variable selon votre profil et votre historique</p>
+                <p className="text-lg"><strong>Objectif :</strong> vous assurer immédiatement et démarrer votre parcours</p>
                 <ul className="space-y-2 mt-4">
                   <li className="flex items-start gap-2"><CheckCircle size={20} className={`${n.bulletColor} mt-1 flex-shrink-0`} /><span>Accompagnement personnalisé</span></li>
                   <li className="flex items-start gap-2"><CheckCircle size={20} className={`${n.bulletColor} mt-1 flex-shrink-0`} /><span>Renégociation annuelle</span></li>
@@ -42,11 +42,11 @@ export default function Programme(){
         </div>
 
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
-          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Calendrier type du parcours</h3>
+          <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Calendrier type d'un parcours</h3>
           {[
-            {year:'An 1', title:'Stabilisation (Niveau 1)', desc:'Assurance immédiate, reconstruction du dossier, aucun sinistre', bg:'bg-urgent-red'},
-            {year:'An 2', title:'Amélioration (Passage Niveau 2)', desc:'Réduction du malus, meilleur tarif, début de réhabilitation', bg:'bg-progress-orange'},
-            {year:'An 3', title:'Retour à la normale (Niveau 3)', desc:'Profil standard, tarifs normaux, autonomie complète', bg:'bg-progress-green'},
+            {year:'Année 1', title:'Stabilisation (niveau 1)', desc:'Vous êtes assuré immédiatement, on reconstruit votre dossier, objectif zéro sinistre', bg:'bg-urgent-red'},
+            {year:'Année 2', title:'Amélioration (passage niveau 2)', desc:'Votre malus diminue, les tarifs baissent, la réhabilitation démarre vraiment', bg:'bg-progress-orange'},
+            {year:'Année 3', title:'Retour à la normale (niveau 3)', desc:'Profil standard retrouvé, tarifs compétitifs, vous êtes de nouveau autonome', bg:'bg-progress-green'},
           ].map((t,i)=> (
             <div key={i} className="flex items-start gap-4 mb-6 last:mb-0">
               <div className={`w-12 h-12 ${t.bg} rounded-full flex items-center justify-center text-white font-bold flex-shrink-0`}>{t.year}</div>

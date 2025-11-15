@@ -23,27 +23,27 @@ export default function Home(){
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              RÉSILIÉ • MALUSSÉ • REFUSÉ
+              Résilié · Malussé · Refusé
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               On vous assure<br />
-              <span className="text-urgent-red">aujourd’hui</span>
+              <span className="text-urgent-red">dès aujourd'hui</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Le seul cabinet qui vous accompagne, année après année, jusqu’à redevenir un profil standard.
+              Le seul cabinet qui vous accompagne, année après année, pour retrouver un profil standard et des tarifs normaux.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/urgence-resiliation" className="bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 shadow-lg transition">
-                <AlertCircle size={24} /> URGENCE RÉSILIATION
+                <AlertCircle size={24} /> Urgence résiliation
               </a>
               <a href="#formulaire" className="bg-white text-gray-700 px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-50 border-2 border-gray-300 text-center transition">
-                Devis en 2 minutes
+                Obtenir un devis rapide
               </a>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600">
-              <div className="flex items-center gap-2"><Clock size={16} /> Réponse sous 2h</div>
+              <div className="flex items-center gap-2"><Clock size={16} /> Réponse sous 2 heures</div>
               <div className="flex items-center gap-2"><CheckCircle size={16} /> Sans engagement</div>
-              <div className="flex items-center gap-2"><Award size={16} /> 87% satisfaits</div>
+              <div className="flex items-center gap-2"><Award size={16} /> 87 % de satisfaction</div>
             </div>
           </div>
 
@@ -58,7 +58,7 @@ export default function Home(){
                   <div className="absolute bottom-0 right-12 text-4xl">🩺</div>
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Dr. Auto</h3>
-                <p className="text-gray-600">Votre spécialiste en réhabilitation assurantielle</p>
+                <p className="text-gray-600">Votre spécialiste en réhabilitation d'assurance</p>
               </div>
             </div>
           </div>
@@ -67,8 +67,8 @@ export default function Home(){
 
       <div className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Notre Programme de Réhabilitation</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">Un parcours progressif sur 3 niveaux pour retrouver des tarifs standards</p>
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Notre programme de réhabilitation</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">Un parcours progressif en 3 niveaux pour retrouver des tarifs normaux</p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 relative">
@@ -77,12 +77,12 @@ export default function Home(){
                 <div className="w-16 h-16 bg-urgent-red rounded-full flex items-center justify-center mb-4">
                   <AlertCircle className="text-white" size={32} />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Soins Intensifs</h3>
-                <p className="text-gray-700 mb-4">Résiliation, refus, malus lourd</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Soins intensifs</h3>
+                <p className="text-gray-700 mb-4">Résiliation, refus, malus élevé</p>
                 <ul className="space-y-2 text-sm text-gray-600">
                   <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-urgent-red flex-shrink-0" /> Assurance immédiate</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-urgent-red flex-shrink-0" /> Même profil complexe</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-urgent-red flex-shrink-0" /> Tarif adapté</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-urgent-red flex-shrink-0" /> Même avec un profil difficile</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-urgent-red flex-shrink-0" /> Tarif adapté à votre situation</li>
                 </ul>
               </div>
             </div>
@@ -103,12 +103,12 @@ export default function Home(){
               <div className="absolute -top-4 left-6 bg-progress-green text-white px-4 py-1 rounded-full text-sm font-bold">NIVEAU 3</div>
               <div className="mt-4">
                 <div className="w-16 h-16 bg-progress-green rounded-full flex items-center justify-center mb-4">✅</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">Retour Standard</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Retour au standard</h3>
                 <p className="text-gray-700 mb-4">Profil réhabilité</p>
                 <ul className="space-y-2 text-sm text-gray-600">
-                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Assurable partout</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Meilleurs tarifs</li>
-                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Autonomie retrouvée</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Vous êtes assurable partout</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Tarifs compétitifs</li>
+                  <li className="flex items-start gap-2"><CheckCircle size={16} className="mt-0.5 text-progress-green flex-shrink-0" /> Vous retrouvez votre autonomie</li>
                 </ul>
               </div>
             </div>
@@ -127,14 +127,14 @@ export default function Home(){
       <div id="formulaire" className="py-16 px-4 bg-white">
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-2">Devis Express</h2>
-            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2h</p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-2">Devis express</h2>
+            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2 heures</p>
           </div>
           <form onSubmit={onSubmit}>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Nom complet *</label>
-                <input required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" placeholder="Jean Dupont" value={formData.nom} onChange={e=>setFormData({...formData, nom:e.target.value})} />
+                <input required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" placeholder="Prénom et nom" value={formData.nom} onChange={e=>setFormData({...formData, nom:e.target.value})} />
               </div>
               <div>
                 <label className="block text-sm font-semibold text-gray-700 mb-2">Téléphone *</label>
@@ -152,7 +152,7 @@ export default function Home(){
               </select>
             </div>
             <button className="w-full bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
-              <Phone size={24} /> Être rappelé sous 2h
+              <Phone size={24} /> Être rappelé sous 2 heures
             </button>
             <p className="text-center text-sm text-gray-500 mt-4">🔒 Vos données sont protégées et conformes RGPD</p>
           </form>

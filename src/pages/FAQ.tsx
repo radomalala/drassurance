@@ -6,25 +6,25 @@ export default function FAQ(){
   const [open, setOpen] = useState<string|null>(null)
   const data = [
     {category:'Résiliation', questions:[
-      {q:"Puis-je être assuré si j'ai été résilié pour non-paiement ?", a:"Oui, des assureurs spécialisés acceptent ce profil. Le tarif est adapté."},
-      {q:'Combien de temps après une résiliation puis-je m’assurer ?', a:'Immédiatement, une solution peut être trouvée dès le lendemain.'},
-      {q:'Dois-je déclarer ma résiliation à tous les assureurs ?', a:'Oui, c’est obligatoire sous peine de nullité du contrat.'},
+      {q:"Puis-je être assuré si j'ai été résilié pour non-paiement ?", a:"Oui, nous travaillons avec des assureurs spécialisés qui acceptent ce type de profil. Le tarif sera adapté à votre situation."},
+      {q:'Combien de temps après une résiliation puis-je m’assurer ?', a:'Dès le lendemain. Nous pouvons trouver une solution immédiate, même en urgence.'},
+      {q:'Dois-je déclarer ma résiliation à tous les assureurs ?', a:'Oui, c’est obligatoire. Toute fausse déclaration peut entraîner la nullité du contrat.'},
     ]},
     {category:'Malus', questions:[
-      {q:'À partir de quel malus êtes-vous spécialisés ?', a:'Dès 1.25, et surtout au-delà de 2.00.'},
-      {q:'Peut-on effacer un malus rapidement ?', a:'Non, baisse de 5% par an sans sinistre. Nous accompagnons ce parcours.'},
+      {q:'À partir de quel malus êtes-vous spécialisés ?', a:'Nous intervenons dès un malus de 1.25, et surtout au-delà de 2.00 où peu d’assureurs acceptent.'},
+      {q:'Peut-on effacer un malus rapidement ?', a:'Non, le malus diminue de 5 % par année sans sinistre. Notre rôle est de vous accompagner durant cette période.'},
     ]},
     {category:'Le programme', questions:[
-      {q:'Combien de temps dure le parcours complet ?', a:'Entre 2 et 4 ans selon le profil.'},
-      {q:'Puis-je arrêter en cours de route ?', a:"Oui, sans engagement. Vous pouvez partir quand vous voulez."},
+      {q:'Combien de temps dure le parcours complet ?', a:'Entre 2 et 4 ans selon votre profil de départ et votre évolution. Chaque situation est unique.'},
+      {q:'Puis-je arrêter en cours de route ?', a:"Oui, absolument. Vous n'avez aucun engagement et pouvez partir quand vous le souhaitez."},
     ]},
   ]
   return (
     <div className="py-16 px-4">
       {useMeta('FAQ — La Clinique des Résiliés', 'Questions fréquentes sur la résiliation, le malus et notre programme de réhabilitation.')}      
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Questions Fréquentes</h1>
-        <p className="text-xl text-center text-gray-600 mb-12">Tout ce que vous devez savoir sur notre programme de réhabilitation</p>
+        <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Vos questions, nos réponses</h1>
+        <p className="text-xl text-center text-gray-600 mb-12">Tout ce que vous devez savoir sur notre programme</p>
         <div className="space-y-8">
           {data.map((cat,ci)=> (
             <div key={ci}>
