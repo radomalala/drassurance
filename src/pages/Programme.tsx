@@ -43,19 +43,23 @@ export default function Programme(){
 
         <div className="mt-16 bg-gray-50 rounded-2xl p-8">
           <h3 className="text-2xl font-bold text-center text-gray-900 mb-8">Calendrier type d'un parcours</h3>
-          {[
-            {year:'Année 1', title:'Stabilisation (niveau 1)', desc:'Vous êtes assuré immédiatement, on reconstruit votre dossier, objectif zéro sinistre', bg:'bg-urgent-red'},
-            {year:'Année 2', title:'Amélioration (passage niveau 2)', desc:'Votre malus diminue, les tarifs baissent, la réhabilitation démarre vraiment', bg:'bg-progress-orange'},
-            {year:'Année 3', title:'Retour à la normale (niveau 3)', desc:'Profil standard retrouvé, tarifs compétitifs, vous êtes de nouveau autonome', bg:'bg-progress-green'},
-          ].map((t,i)=> (
-            <div key={i} className="flex items-start gap-4 mb-6 last:mb-0">
-              <div className={`w-12 h-12 ${t.bg} rounded-full flex items-center justify-center text-white font-bold flex-shrink-0`}>{t.year}</div>
-              <div>
-                <h4 className="font-bold text-gray-900 mb-1">{t.title}</h4>
-                <p className="text-gray-600">{t.desc}</p>
+          <div className="max-w-3xl mx-auto">
+            {[
+              {year:'Année 1', title:'Stabilisation (niveau 1)', desc:'Vous êtes assuré immédiatement, on reconstruit votre dossier, objectif zéro sinistre', bg:'bg-urgent-red'},
+              {year:'Année 2', title:'Amélioration (passage niveau 2)', desc:'Votre malus diminue, les tarifs baissent, la réhabilitation démarre vraiment', bg:'bg-progress-orange'},
+              {year:'Année 3', title:'Retour à la normale (niveau 3)', desc:'Profil standard retrouvé, tarifs compétitifs, vous êtes de nouveau autonome', bg:'bg-progress-green'},
+            ].map((t,i)=> (
+              <div key={i} className="flex items-start gap-6 mb-8 last:mb-0">
+                <div className={`w-20 h-20 ${t.bg} rounded-full flex items-center justify-center text-white font-bold flex-shrink-0 text-sm shadow-lg`}>
+                  <span className="text-center leading-tight">{t.year}</span>
+                </div>
+                <div className="flex-1 pt-2">
+                  <h4 className="font-bold text-gray-900 mb-2 text-lg">{t.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{t.desc}</p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
