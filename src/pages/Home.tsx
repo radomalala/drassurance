@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { AlertCircle, Phone, CheckCircle, Clock, Award } from 'lucide-react'
 import { useMeta } from '../hooks/useMeta'
+import Mascotte from '../components/Mascotte'
 
 export default function Home(){
   const [formData, setFormData] = useState({ nom:'', tel:'', situation:'' })
@@ -19,17 +20,17 @@ export default function Home(){
         </div>
       )}
 
-      <div className="bg-gradient-to-br from-red-50 to-white py-16 px-4">
+      <div className="bg-gradient-to-br from-red-50 to-white dark:from-slate-900 dark:to-slate-950 py-16 px-4">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               Résilié · Malussé · Refusé
             </div>
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               On vous assure<br />
               <span className="text-urgent-red">dès aujourd'hui</span>
             </h1>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Le seul cabinet qui vous accompagne, année après année, pour retrouver un profil standard et des tarifs normaux.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -40,7 +41,7 @@ export default function Home(){
                 Obtenir un devis rapide
               </a>
             </div>
-            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600">
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
               <div className="flex items-center gap-2"><Clock size={16} /> Réponse sous 2 heures</div>
               <div className="flex items-center gap-2"><CheckCircle size={16} /> Sans engagement</div>
               <div className="flex items-center gap-2"><Award size={16} /> 87 % de satisfaction</div>
@@ -48,17 +49,9 @@ export default function Home(){
           </div>
 
           <div className="relative">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 relative">
+            <div className="bg-white dark:bg-slate-900 rounded-3xl shadow-2xl p-8 relative">
               <div className="text-center">
-                <div className="w-48 h-48 mx-auto mb-4 relative">
-                  <div className="absolute inset-0 bg-blue-100 rounded-full flex items-center justify-center">
-                    <div className="text-6xl">🚗</div>
-                  </div>
-                  <div className="absolute top-8 right-8 bg-white border-2 border-red-400 rounded px-2 py-1 text-2xl rotate-12">🩹</div>
-                  <div className="absolute bottom-0 right-12 text-4xl">🩺</div>
-                </div>
-                <h3 className="text-2xl font-bold text-gray-800 mb-2">Dr. Auto</h3>
-                <p className="text-gray-600">Votre spécialiste en réhabilitation d'assurance</p>
+                <Mascotte size="lg" caption="Votre spécialiste en réhabilitation d'assurance" />
               </div>
             </div>
           </div>
