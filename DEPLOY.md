@@ -57,7 +57,9 @@ Si besoin plus tard :
 
 ## ✅ Checklist avant déploiement
 
-- [x] Logo personnalisé dans `public/logo.svg`
+- [x] Vérification finale du build local : `npm run build`
+- [x] Logo personnalisé dans `public/mockups/icone_logo.PNG`
+- [x] Fichier `.env` configuré (si nécessaire)
 - [x] Coordonnées réelles dans Footer et Contact
 - [ ] Numéro de téléphone réel (actuellement `01 XX XX XX XX`)
 - [ ] Email réel (actuellement `contact@clinique-resilies.fr`)

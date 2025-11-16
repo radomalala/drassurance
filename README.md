@@ -121,7 +121,7 @@ colors: {
 
 ### Logo
 
-Remplace `public/logo.svg` par ton logo.
+Remplace `public/mockups/icone_logo.PNG` par ton logo.
 
 ### Contact
 
