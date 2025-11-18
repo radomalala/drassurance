@@ -4,7 +4,7 @@ import { AlertCircle, Phone, FileText, TrendingUp, CheckCircle, Clock, Menu, X, 
 export default function CliniqueResilesApp() {
   const [currentPage, setCurrentPage] = useState('accueil');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+  const [openFaqIndex, setOpenFaqIndex] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     nom: '',
     tel: '',
@@ -19,7 +19,7 @@ export default function CliniqueResilesApp() {
     setMobileMenuOpen(false);
   }, [currentPage]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setShowSuccess(true);
     setTimeout(() => setShowSuccess(false), 5000);
@@ -1198,7 +1198,7 @@ export default function CliniqueResilesApp() {
                     <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
                     <textarea 
                       required
-                      rows="4"
+                      rows={4}
                       className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none"
                       value={formData.message}
                       onChange={(e) => setFormData({...formData, message: e.target.value})}
