@@ -28,6 +28,7 @@ export default function Navigation(){
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <NavLink to="/" className={linkCls}>Accueil</NavLink>
             <NavLink to="/urgence-resiliation" className={linkCls}>Urgences</NavLink>
+            <NavLink to="/types-resiliation" className={linkCls}>Types de résiliation</NavLink>
             <NavLink to="/programme" className={linkCls}>Programme</NavLink>
             <NavLink to="/temoignages" className={linkCls}>Témoignages</NavLink>
             <NavLink to="/faq" className={linkCls}>FAQ</NavLink>
@@ -48,6 +49,7 @@ export default function Navigation(){
             <div className="flex flex-col py-4 px-4 gap-4">
               <NavLink onClick={()=>setMobileOpen(false)} to="/" className="text-left py-2 hover:text-urgent-red">Accueil</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/urgence-resiliation" className="text-left py-2 hover:text-urgent-red">Urgences</NavLink>
+              <NavLink onClick={()=>setMobileOpen(false)} to="/types-resiliation" className="text-left py-2 hover:text-urgent-red">Types de résiliation</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/programme" className="text-left py-2 hover:text-urgent-red">Programme</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/temoignages" className="text-left py-2 hover:text-urgent-red">Témoignages</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/faq" className="text-left py-2 hover:text-urgent-red">FAQ</NavLink>

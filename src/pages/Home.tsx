@@ -16,7 +16,7 @@ export default function Home(){
       {useMeta('Assurance Auto Résilié | La Clinique des Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 2h.")}
       {ok && (
         <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50">
-          Merci ! Nous vous rappelons sous 2h.
+          Merci ! Nous vous rappelons sous 15mn.
         </div>
       )}
 
@@ -27,8 +27,8 @@ export default function Home(){
               Résilié · Malussé · Refusé
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              On vous assure<br />
-              <span className="text-urgent-red">dès aujourd'hui</span>
+              On vous assure dès aujourd'hui<br />
+              <span className="text-urgent-red">mieux et moins chère</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
               Le seul cabinet qui vous accompagne, année après année, pour retrouver un profil standard et des tarifs normaux.
@@ -42,9 +42,9 @@ export default function Home(){
               </a>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600 dark:text-gray-300">
-              <div className="flex items-center gap-2"><Clock size={16} /> Réponse sous 2 heures</div>
+              <div className="flex items-center gap-2"><Clock size={16} /> Réponse sous 15 minutes</div>
               <div className="flex items-center gap-2"><CheckCircle size={16} /> Sans engagement</div>
-              <div className="flex items-center gap-2"><Award size={16} /> 87 % de satisfaction</div>
+              <div className="flex items-center gap-2"><Award size={16} /> 99 % de satisfaction</div>
             </div>
           </div>
 
