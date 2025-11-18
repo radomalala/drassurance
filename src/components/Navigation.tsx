@@ -62,6 +62,16 @@ export default function Navigation(){
           </div>
         )}
       </nav>
+      <div aria-label="Bandeau d'accroche" className="bg-gradient-to-r from-urgent-red/10 to-orange-100 dark:from-slate-900 dark:to-slate-900 border-y border-red-100 dark:border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex flex-col md:flex-row items-center justify-between gap-3">
+          <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 text-center md:text-left">
+            Assurance résilié dès <span className="font-bold text-urgent-red">16&nbsp;€/mois*</span> • Devis en 5&nbsp;min
+          </p>
+          <a href="/#formulaire" className="inline-flex items-center justify-center bg-urgent-red text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700 transition">
+            Demander un devis rapide
+          </a>
+        </div>
+      </div>
     </>
   )
 }
