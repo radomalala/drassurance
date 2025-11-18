@@ -8,13 +8,13 @@ export default function Contact(){
   const onSubmit=(e:React.FormEvent)=>{e.preventDefault(); setOk(true); setTimeout(()=>setOk(false),4000); setF({nom:'',email:'',tel:'',sujet:'',message:''})}
   return (
     <div className="py-16 px-4">
-      {useMeta('Contact — La Clinique des Résiliés', 'Contactez-nous : téléphone, email, horaires. Formulaire de contact disponible.')}      
+      {useMeta('Contact — La Clinique des Assurances Résiliés', 'Contactez-nous : téléphone, email, horaires. Formulaire de contact disponible.')}      
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Contactez-nous</h1>
         <p className="text-xl text-center text-gray-600 mb-12">Notre équipe est à votre écoute pour répondre à toutes vos questions</p>
         <div className="grid md:grid-cols-2 gap-12">
           <div>
-            {ok && <div className="bg-green-500 text-white px-4 py-2 rounded mb-4">Message envoyé. Merci !</div>}
+            {ok && <div role="alert" aria-live="polite" className="bg-green-600 text-white px-4 py-2 rounded mb-4">Message envoyé. Merci !</div>}
             <div className="bg-gradient-to-br from-red-50 to-white rounded-2xl shadow-lg p-8 mb-8">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Formulaire de Contact</h2>
               <form onSubmit={onSubmit} className="space-y-4">

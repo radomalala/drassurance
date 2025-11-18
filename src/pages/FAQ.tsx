@@ -21,7 +21,21 @@ export default function FAQ(){
   ]
   return (
     <div className="py-16 px-4">
-      {useMeta('FAQ — La Clinique des Résiliés', 'Questions fréquentes sur la résiliation, le malus et notre programme de réhabilitation.')}      
+      {useMeta({
+        title:'FAQ — La Clinique des Assurances Résiliés',
+        description:'Questions fréquentes sur la résiliation, le malus et notre programme de réhabilitation.',
+        jsonLd: [
+          {
+            '@context':'https://schema.org',
+            '@type':'FAQPage',
+            mainEntity: data.flatMap(cat => cat.questions.map(q => ({
+              '@type':'Question',
+              name: q.q,
+              acceptedAnswer:{ '@type':'Answer', text: q.a }
+            })))
+          }
+        ]
+      })}      
       <div className="max-w-4xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Vos questions, nos réponses</h1>
         <p className="text-xl text-center text-gray-600 mb-12">Tout ce que vous devez savoir sur notre programme</p>

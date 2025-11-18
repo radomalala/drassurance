@@ -9,7 +9,7 @@ export default function Urgence(){
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-red-50 to-white min-h-screen">
       <div className="max-w-4xl mx-auto text-center">
-        {ok && <div className="bg-green-500 text-white px-4 py-2 rounded mb-6 inline-block">Merci ! Nous vous rappelons sous 2h.</div>}
+        {ok && <div role="alert" aria-live="polite" className="bg-green-600 text-white px-4 py-2 rounded mb-6 inline-block">Merci ! Nous vous rappelons sous 2h.</div>}
         <div className="mb-8">
           <div className="inline-block bg-urgent-red text-white px-6 py-3 rounded-full text-lg font-bold mb-6">🚨 Urgence résiliation</div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Résilié ?<br/><span className="text-urgent-red">On vous assure dès aujourd'hui mieux et moins chère</span></h1>

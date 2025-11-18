@@ -3,7 +3,7 @@ import { useMeta } from '../hooks/useMeta'
 import { AlertTriangle, Ban, ShieldCheck, FileText, Car, Activity } from 'lucide-react'
 
 export default function TypesResiliation(){
-  useMeta('Types de Résiliation & Infos Utiles — La Clinique des Résiliés', "Vous avez été résilié ? Nous vous aidons à retrouver une assurance au meilleur tarif. DR Assurance accompagne chaque conducteur pour obtenir rapidement un contrat conforme et adapté.")
+  useMeta('Types de Résiliation & Infos Utiles — La Clinique des Assurances Résiliés', "Vous avez été résilié ? Nous vous aidons à retrouver une assurance au meilleur tarif. DR Assurance accompagne chaque conducteur pour obtenir rapidement un contrat conforme et adapté.")
 
   const Section = ({icon:Icon, title, why, consequences, actions}:{icon:any, title:string, why:string, consequences:string[], actions:string[]}) => (
     <section className="bg-white dark:bg-slate-900 rounded-2xl shadow-md p-6 md:p-8 border border-gray-100 dark:border-slate-800">
@@ -38,7 +38,7 @@ export default function TypesResiliation(){
         <header className="text-center">
           <p className="inline-block bg-red-100 text-urgent-red px-4 py-1 rounded-full text-sm font-semibold mb-4">Types de Résiliation & Informations Utiles</p>
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">Vous avez été résilié ?</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300">Nous vous aidons à retrouver une assurance au meilleur tarif. Chez DR Assurance, nous accompagnons chaque conducteur, même en situation difficile, pour obtenir rapidement un nouveau contrat adapté et conforme aux exigences légales.</p>
+          <p className="text-lg text-gray-600 dark:text-gray-300">Nous vous aidons à retrouver une assurance au meilleur tarif. Parcourez aussi notre <a href="/programme" className="text-urgent-red underline">programme de réhabilitation en 3 niveaux</a> et les <a href="/temoignages" className="text-urgent-red underline">témoignages clients</a>.</p>
         </header>
 
         <div className="space-y-8">

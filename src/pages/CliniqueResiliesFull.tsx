@@ -85,7 +85,7 @@ export default function CliniqueResilesApp() {
               <div className="w-8 h-8 bg-urgent-red rounded-full flex items-center justify-center">
                 <span className="font-bold">+</span>
               </div>
-              <span className="font-bold">La Clinique des Résiliés</span>
+              <span className="font-bold">La Clinique des Assurances Résiliés</span>
             </div>
             <p className="text-gray-400 text-sm">
               Le seul cabinet d assurance dédié à la réhabilitation des profils difficiles
@@ -132,7 +132,7 @@ export default function CliniqueResilesApp() {
         </div>
 
         <div className="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-          © 2024 La Clinique des Résiliés. Tous droits réservés.
+          © 2024 La Clinique des Assurances Résiliés. Tous droits réservés.
         </div>
       </div>
     </footer>
@@ -213,7 +213,7 @@ export default function CliniqueResilesApp() {
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Dr. Auto</h3>
                 <p className="text-gray-600">
-                  Votre spécialiste en réhabilitation assurantielle
+                Votre spécialiste en assurance auto résilé, malussé et refusé
                 </p>
               </div>
             </div>

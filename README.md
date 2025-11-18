@@ -1,4 +1,4 @@
-# La Clinique des Résiliés
+# La Clinique des Assurances Résiliés
 
 Site web React + TypeScript + TailwindCSS pour un cabinet d'assurance spécialisé dans les profils résiliés.
 
@@ -129,4 +129,4 @@ Mets à jour les coordonnées dans `src/components/Footer.tsx` et `src/pages/Con
 
 ## 📄 License
 
-Propriétaire - La Clinique des Résiliés
+Propriétaire - La Clinique des Assurances Résiliés

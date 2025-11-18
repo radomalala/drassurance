@@ -14,7 +14,7 @@ export default function Mascotte({ size = 'lg', caption, rounded = true, classNa
       <div className={`relative ${dims}`}>
         <img
           src="/mockups/mascotte.PNG"
-          alt="Mascotte de la Clinique des Résiliés"
+          alt="Mascotte de La Clinique des Assurances Résiliés"
           className={`object-contain ${rounded ? 'rounded-2xl' : ''} w-full h-full shadow-lg bg-white dark:bg-slate-900`}
           loading="eager"
         />

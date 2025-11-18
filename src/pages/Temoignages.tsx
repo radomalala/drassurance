@@ -11,7 +11,7 @@ export default function Temoignages(){
       {useMeta('Témoignages — Parcours de nos patients', 'Histoires vraies de conducteurs passés de résiliés à profils standards.')}      
       <div className="max-w-6xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-4">Ils ont retrouvé une assurance normale</h1>
-        <p className="text-xl text-center text-gray-600 mb-12">Découvrez les parcours de conducteurs que nous avons accompagnés</p>
+        <p className="text-xl text-center text-gray-600 mb-12">Découvrez les parcours de conducteurs que nous avons accompagnés. Comprendre votre situation ? Consultez les <a href="/types-resiliation" className="text-urgent-red underline">types de résiliation</a>.</p>
         <div className="grid md:grid-cols-2 gap-8">
           {cards.map((c,idx)=> (
             <div key={idx} className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg p-8">

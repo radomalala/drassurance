@@ -4,7 +4,7 @@ import { useMeta } from '../hooks/useMeta'
 export default function APropos(){
   return (
     <div className="py-16 px-4">
-      {useMeta('À propos — La Clinique des Résiliés', 'Notre approche : bienveillance, expertise et résultats pour les conducteurs résiliés.')}      
+      {useMeta('À propos — La Clinique des Assurances Résiliés', 'Notre approche : bienveillance, expertise et résultats pour les conducteurs résiliés.')}      
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">La première clinique assurantielle de France</h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Nous avons créé un concept unique: accompagner les conducteurs en difficulté jusqu’à leur réhabilitation complète</p>
@@ -24,7 +24,7 @@ export default function APropos(){
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12 mb-16">
           <h2 className="text-3xl font-bold text-gray-900 mb-6">Notre Mission</h2>
           <p className="text-lg text-gray-700 mb-4">Trop de conducteurs se retrouvent exclus du système d’assurance traditionnel. Résiliés, malussés, refusés... ils se sentent abandonnés et paient des tarifs exorbitants.</p>
-          <p className="text-lg text-gray-700 mb-4">Nous avons créé <strong>La Clinique des Résiliés</strong> pour leur offrir une solution complète: assurer immédiatement, mais surtout accompagner année après année jusqu’à la réhabilitation totale.</p>
+          <p className="text-lg text-gray-700 mb-4">Nous avons créé <strong>La Clinique des Assurances Résiliés</strong> pour leur offrir une solution complète: assurer immédiatement, mais surtout accompagner année après année jusqu’à la réhabilitation totale.</p>
           <p className="text-lg text-gray-700">Notre approche médicale n’est pas un hasard: nous traitons chaque dossier comme un patient à soigner, avec un programme de guérison progressif.</p>
         </div>
         <div className="mb-16">

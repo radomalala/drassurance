@@ -13,9 +13,9 @@ export default function Home(){
   }
   return (
     <>
-      {useMeta('Assurance Auto Résilié | La Clinique des Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 2h.")}
+      {useMeta('Assurance Auto Résilié | La Clinique des Assurances Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 2h.")}
       {ok && (
-        <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50">
+        <div role="alert" aria-live="polite" className="fixed top-24 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-xl z-50">
           Merci ! Nous vous rappelons sous 15mn.
         </div>
       )}
@@ -24,15 +24,21 @@ export default function Home(){
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Résilié · Malussé · Refusé
+              Assurance Résilié, Malussé ou Refusé
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               On vous assure dès aujourd'hui<br />
               <span className="text-urgent-red">mieux et moins chère</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-              Le seul cabinet qui vous accompagne, année après année, pour retrouver un profil standard et des tarifs normaux.
+              Programme unique en 3 niveaux : assurance immédiate, réhabilitation de votre profil, retour à des tarifs standards. Objectif final : payer votre assurance comme un conducteur classique.
             </p>
+            <ul className="mb-8 space-y-2 text-gray-700 dark:text-gray-300 text-sm">
+              <li className="flex items-start gap-2"><CheckCircle className="text-urgent-red flex-shrink-0" size={16}/> Devis prioritaire & réponse sous 15 minutes</li>
+              <li className="flex items-start gap-2"><CheckCircle className="text-urgent-red flex-shrink-0" size={16}/> Accompagnement pluriannuel structuré</li>
+              <li className="flex items-start gap-2"><CheckCircle className="text-urgent-red flex-shrink-0" size={16}/> Négociation annuelle pour abaisser vos coûts</li>
+              <li className="flex items-start gap-2"><CheckCircle className="text-urgent-red flex-shrink-0" size={16}/> Transition vers assureurs généralistes</li>
+            </ul>
             <div className="flex flex-col sm:flex-row gap-4">
               <a href="/urgence-resiliation" className="bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 shadow-lg transition">
                 <AlertCircle size={24} /> Urgence résiliation
@@ -61,7 +67,7 @@ export default function Home(){
       <div className="py-16 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-4">Notre programme de réhabilitation</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto text-lg">Un parcours progressif en 3 niveaux pour retrouver des tarifs normaux</p>
+          <p className="text-center text-gray-600 dark:text-gray-300 mb-12 max-w-2xl mx-auto text-lg">Un parcours structuré en 3 niveaux pour retrouver des primes normales. Découvrez le détail du <a href="/programme" className="text-urgent-red underline">programme</a> ou consultez les <a href="/types-resiliation" className="text-urgent-red underline">types de résiliation</a>.</p>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
             <div className="bg-red-50 border-2 border-red-200 rounded-2xl p-6 relative">
