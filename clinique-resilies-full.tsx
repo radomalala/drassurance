@@ -543,7 +543,7 @@ export default function CliniqueResilesApp() {
                 <strong>Durée :</strong> 12 à 24 mois selon votre profil
               </p>
               <p className="text-lg">
-                <strong>Prix moyen :</strong> À partir de 1800€/an
+                <strong>Prix moyen :</strong> À partir de 150 €/mois
               </p>
               <p className="text-lg">
                 <strong>Nos partenaires :</strong> Nous travaillons avec des assureurs spécialisés acceptant les profils difficiles
@@ -588,7 +588,7 @@ export default function CliniqueResilesApp() {
                 <strong>Durée :</strong> 18 à 36 mois
               </p>
               <p className="text-lg">
-                <strong>Prix moyen :</strong> De 1200€ à 1600€/an
+                <strong>Prix moyen :</strong> De 100 € à 133 €/mois
               </p>
               <p className="text-lg">
                 <strong>Objectif :</strong> Réduire progressivement votre malus et accéder à des assureurs plus compétitifs
@@ -633,7 +633,7 @@ export default function CliniqueResilesApp() {
                 <strong>Durée :</strong> Autonomie retrouvée
               </p>
               <p className="text-lg">
-                <strong>Prix moyen :</strong> 700€ à 1000€/an
+                <strong>Prix moyen :</strong> 58 € à 83 €/mois
               </p>
               <p className="text-lg">
                 <strong>Résultat :</strong> Vous êtes désormais assurable partout aux tarifs du marché standard
@@ -723,21 +723,21 @@ export default function CliniqueResilesApp() {
                   <span className="text-2xl">🔴</span>
                   <span className="font-semibold text-sm">2021: Résilié</span>
                 </div>
-                <span className="font-bold text-red-600">2850€/an</span>
+                <span className="font-bold text-red-600">238 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-orange-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟠</span>
                   <span className="font-semibold text-sm">2022: Niveau 2</span>
                 </div>
-                <span className="font-bold text-orange-600">2200€/an</span>
+                <span className="font-bold text-orange-600">183 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-green-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟢</span>
                   <span className="font-semibold text-sm">2024: Standard</span>
                 </div>
-                <span className="font-bold text-green-600">1400€/an</span>
+                <span className="font-bold text-green-600">117 €/mois</span>
               </div>
             </div>
 
@@ -767,21 +767,21 @@ export default function CliniqueResilesApp() {
                   <span className="text-2xl">🔴</span>
                   <span className="font-semibold text-sm">2022: Malus 2.5</span>
                 </div>
-                <span className="font-bold text-red-600">3200€/an</span>
+                <span className="font-bold text-red-600">267 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-orange-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟠</span>
                   <span className="font-semibold text-sm">2023: Niveau 2</span>
                 </div>
-                <span className="font-bold text-orange-600">1900€/an</span>
+                <span className="font-bold text-orange-600">158 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-green-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟢</span>
                   <span className="font-semibold text-sm">2024: En cours</span>
                 </div>
-                <span className="font-bold text-green-600">1200€/an</span>
+                <span className="font-bold text-green-600">100 €/mois</span>
               </div>
             </div>
 
@@ -811,21 +811,21 @@ export default function CliniqueResilesApp() {
                   <span className="text-2xl">🔴</span>
                   <span className="font-semibold text-sm">2020: 4 refus</span>
                 </div>
-                <span className="font-bold text-red-600">4100€/an</span>
+                <span className="font-bold text-red-600">342 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-orange-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟠</span>
                   <span className="font-semibold text-sm">2022: Niveau 2</span>
                 </div>
-                <span className="font-bold text-orange-600">2400€/an</span>
+                <span className="font-bold text-orange-600">200 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-green-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟢</span>
                   <span className="font-semibold text-sm">2024: Standard</span>
                 </div>
-                <span className="font-bold text-green-600">950€/an</span>
+                <span className="font-bold text-green-600">79 €/mois</span>
               </div>
             </div>
 
@@ -855,14 +855,14 @@ export default function CliniqueResilesApp() {
                   <span className="text-2xl">🔴</span>
                   <span className="font-semibold text-sm">2022: Malus 3.0</span>
                 </div>
-                <span className="font-bold text-red-600">3600€/an</span>
+                <span className="font-bold text-red-600">300 €/mois</span>
               </div>
               <div className="flex items-center justify-between bg-orange-50 p-3 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🟠</span>
                   <span className="font-semibold text-sm">2024: Niveau 2</span>
                 </div>
-                <span className="font-bold text-orange-600">1800€/an</span>
+                <span className="font-bold text-orange-600">150 €/mois</span>
               </div>
             </div>
 
