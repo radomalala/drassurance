@@ -21,7 +21,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    const { nom, tel, situation, infos } = req.body || {}
+    let body: any = req.body
+    if (typeof body === 'string') {
+      try { body = JSON.parse(body) } catch { /* ignore parse error */ }
+    }
+    const { nom, tel, situation, infos } = body || {}
     if (!nom || !tel || !situation) {
       res.status(400).json({ error: 'Champs requis manquants' })
       return
