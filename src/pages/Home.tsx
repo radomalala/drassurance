@@ -4,12 +4,27 @@ import { useMeta } from '../hooks/useMeta'
 import Mascotte from '../components/Mascotte'
 
 export default function Home(){
-  const [formData, setFormData] = useState({ nom:'', tel:'', situation:'' })
+  const [formData, setFormData] = useState({ nom:'', tel:'', situation:'', infos:'' })
   const [ok, setOk] = useState(false)
-  const onSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false)
+  const [error, setError] = useState<string|undefined>(undefined)
+  const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setOk(true); setTimeout(()=>setOk(false), 4000);
-    setFormData({ nom:'', tel:'', situation:'' })
+    setSending(true); setError(undefined)
+    try {
+      const resp = await fetch('/api/send-quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+      if(!resp.ok) throw new Error('Erreur lors de l\'envoi');
+      setOk(true); setTimeout(()=>setOk(false), 5000);
+      setFormData({ nom:'', tel:'', situation:'', infos:'' })
+    } catch(err:any){
+      setError(err.message || 'Une erreur est survenue');
+    } finally {
+      setSending(false);
+    }
   }
   return (
     <>
@@ -127,7 +142,7 @@ export default function Home(){
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Devis express</h2>
-            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2 heures</p>
+            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2 heures. Plus vous êtes précis, plus notre réponse est rapide.</p>
           </div>
           <form onSubmit={onSubmit}>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -150,8 +165,14 @@ export default function Home(){
                 <option value="jeune">Jeune conducteur avec antécédents</option>
               </select>
             </div>
-            <button className="w-full bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
-              <Phone size={24} /> Être rappelé sous 2 heures
+            <div className="mb-6">
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Informations complémentaires</label>
+              <textarea rows={4} placeholder="Contexte de votre résiliation, usage du véhicule, besoins spécifiques..." className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none resize-y" value={formData.infos} onChange={e=>setFormData({...formData, infos:e.target.value})}></textarea>
+              <p className="text-xs text-gray-500 mt-2">Ces détails nous aident à vous proposer une solution adaptée plus rapidement.</p>
+            </div>
+            {error && <div role="alert" className="mb-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded">{error}</div>}
+            <button disabled={sending} className="w-full bg-urgent-red disabled:opacity-60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
+              <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 2 heures'}
             </button>
             <p className="text-center text-sm text-gray-500 mt-4">🔒 Vos données sont protégées et conformes RGPD</p>
           </form>
