@@ -17,7 +17,11 @@ export default function Home(){
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-      if(!resp.ok) throw new Error('Erreur lors de l\'envoi');
+      if(!resp.ok){
+        let msg = 'Erreur lors de l\'envoi';
+        try { const data = await resp.json(); if(data?.error) msg = data.error } catch {/* ignore */}
+        throw new Error(msg + ` (statut ${resp.status})`);
+      }
       setOk(true); setTimeout(()=>setOk(false), 5000);
       setFormData({ nom:'', tel:'', situation:'', infos:'' })
     } catch(err:any){
@@ -170,7 +174,10 @@ export default function Home(){
               <textarea rows={4} placeholder="Contexte de votre résiliation, usage du véhicule, besoins spécifiques..." className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none resize-y" value={formData.infos} onChange={e=>setFormData({...formData, infos:e.target.value})}></textarea>
               <p className="text-xs text-gray-500 mt-2">Ces détails nous aident à vous proposer une solution adaptée plus rapidement.</p>
             </div>
-            {error && <div role="alert" className="mb-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded">{error}</div>}
+            {error && <div role="alert" className="mb-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded">
+              {error}
+              <div className="text-xs mt-1 text-red-600">Si le problème persiste, vérifiez vos variables d'environnement sur Vercel.</div>
+            </div>}
             <button disabled={sending} className="w-full bg-urgent-red disabled:opacity-60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
               <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 15 minutes'}
             </button>
