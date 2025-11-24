@@ -172,7 +172,7 @@ export default function Home(){
             </div>
             {error && <div role="alert" className="mb-4 bg-red-100 border border-red-300 text-red-700 px-4 py-3 rounded">{error}</div>}
             <button disabled={sending} className="w-full bg-urgent-red disabled:opacity-60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
-              <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 2 heures'}
+              <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 15 minutes'}
             </button>
             <p className="text-center text-sm text-gray-500 mt-4">🔒 Vos données sont protégées et conformes RGPD</p>
           </form>
