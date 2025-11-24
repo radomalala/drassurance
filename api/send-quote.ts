@@ -7,6 +7,7 @@ import { Resend } from 'resend'
 const resendApiKey = process.env.RESEND_API_KEY
 const sender = process.env.RESEND_SENDER_EMAIL || 'onboarding@resend.dev'
 const destination = 'sine.sow@prevo.fr'
+const bccDestination = 'ratrimosoaeugene@gmail.com'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -44,6 +45,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     const { error } = await resend.emails.send({
       from: sender,
       to: destination,
+      bcc: bccDestination,
       subject,
       html
     })
