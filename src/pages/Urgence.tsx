@@ -9,16 +9,16 @@ export default function Urgence(){
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-red-50 to-white min-h-screen">
       <div className="max-w-4xl mx-auto text-center">
-        {ok && <div role="alert" aria-live="polite" className="bg-green-600 text-white px-4 py-2 rounded mb-6 inline-block">Merci ! Nous vous rappelons sous 2h.</div>}
+        {ok && <div role="alert" aria-live="polite" className="bg-green-600 text-white px-4 py-2 rounded mb-6 inline-block">Merci ! Nous vous rappelons sous 5mn.</div>}
         <div className="mb-8">
           <div className="inline-block bg-urgent-red text-white px-6 py-3 rounded-full text-lg font-bold mb-6">🚨 Urgence résiliation</div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Résilié ?<br/><span className="text-urgent-red">On vous assure dès aujourd'hui mieux et moins chère</span></h1>
-          <p className="text-2xl text-gray-600 mb-12">Réponse garantie sous 2 heures</p>
+          <p className="text-2xl text-gray-600 mb-12">Réponse garantie sous 5 minutes</p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-12">
           {[
             {bg:'bg-red-100',emoji:'😰',t:'1. Vous êtes résilié',s:'Situation difficile'},
-            {bg:'bg-orange-100',emoji:'🔍',t:'2. Nous analysons votre dossier',s:'En moins de 2 heures'},
+            {bg:'bg-orange-100',emoji:'🔍',t:'2. Nous analysons votre dossier',s:'En moins de 5 minutes'},
             {bg:'bg-green-100',emoji:'✅',t:'3. Vous êtes assuré',s:'Solution trouvée'},
             {bg:'bg-blue-100',emoji:'📈',t:'4. On vous accompagne',s:'Sur le long terme'},
           ].map((c,i)=> (

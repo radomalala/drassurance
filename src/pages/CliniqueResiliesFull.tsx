@@ -29,7 +29,7 @@ export default function CliniqueResilesApp() {
   const Navigation = () => (
     <>
       <div className="bg-urgent-red text-white py-2 px-4 text-center font-bold text-sm">
-        🚨 URGENCE RÉSILIATION ? Réponse sous 2h • Tél: 01 XX XX XX XX
+        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: 01 XX XX XX XX
       </div>
 
       <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -143,7 +143,7 @@ export default function CliniqueResilesApp() {
       <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50 animate-bounce">
         <div className="flex items-center gap-2">
           <CheckCircle size={24} />
-          <span className="font-semibold">Merci ! Nous vous rappelons sous 2h.</span>
+          <span className="font-semibold">Merci ! Nous vous rappelons sous 5mn.</span>
         </div>
       </div>
     )
@@ -186,7 +186,7 @@ export default function CliniqueResilesApp() {
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Clock size={16} />
-                Réponse sous 2h
+                Réponse sous 5mn
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} />
@@ -227,7 +227,7 @@ export default function CliniqueResilesApp() {
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-2">Devis Express</h3>
-            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2h</p>
+            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 5mn</p>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -284,7 +284,7 @@ export default function CliniqueResilesApp() {
               className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg"
             >
               <Phone size={24} />
-              Être rappelé sous 2h
+              Être rappelé sous 5mn
             </button>
 
             <p className="text-center text-sm text-gray-500 mt-4">

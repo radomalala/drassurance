@@ -29,7 +29,7 @@ export default function CliniqueResilesApp() {
   const Navigation = () => (
     <>
       <div className="bg-red-600 text-white py-2 px-4 text-center font-bold text-sm">
-        🚨 URGENCE RÉSILIATION ? Réponse sous 2h • Tél: 01 XX XX XX XX
+        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: 01 XX XX XX XX
       </div>
 
       <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -143,7 +143,7 @@ export default function CliniqueResilesApp() {
       <div className="fixed top-24 right-4 bg-green-500 text-white px-6 py-4 rounded-lg shadow-xl z-50 animate-bounce">
         <div className="flex items-center gap-2">
           <CheckCircle size={24} />
-          <span className="font-semibold">Merci ! Nous vous rappelons sous 2h.</span>
+          <span className="font-semibold">Merci ! Nous vous rappelons sous 5mn.</span>
         </div>
       </div>
     )
@@ -182,7 +182,7 @@ export default function CliniqueResilesApp() {
             <div className="mt-6 flex flex-wrap items-center gap-4 text-sm text-gray-600">
               <div className="flex items-center gap-2">
                 <Clock size={16} />
-                Réponse sous 2h
+                Réponse sous 5mn
               </div>
               <div className="flex items-center gap-2">
                 <CheckCircle size={16} />
@@ -333,8 +333,8 @@ export default function CliniqueResilesApp() {
               <div className="text-gray-600">Clients satisfaits</div>
             </div>
             <div>
-              <div className="text-4xl font-bold text-red-600 mb-2">2h</div>
-              <div className="text-gray-600">Délai de réponse</div>
+              <div className="text-4xl font-bold text-red-600 mb-2">5mn</div>
+                <div className="text-gray-600">Délai de réponse</div>
             </div>
             <div>
               <div className="text-4xl font-bold text-red-600 mb-2">-38%</div>
@@ -352,7 +352,7 @@ export default function CliniqueResilesApp() {
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-8">
             <h3 className="text-3xl font-bold text-gray-900 mb-2">Devis Express</h3>
-            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2h</p>
+            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 5mn</p>
           </div>
 
           <form onSubmit={handleSubmit}>
@@ -409,7 +409,7 @@ export default function CliniqueResilesApp() {
               className="w-full bg-red-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg"
             >
               <Phone size={24} />
-              Être rappelé sous 2h
+              Être rappelé sous 5mn
             </button>
 
             <p className="text-center text-sm text-gray-500 mt-4">
@@ -432,8 +432,8 @@ export default function CliniqueResilesApp() {
             RÉSILIÉ ?<br />
             <span className="text-red-600">On vous assure AUJOURD HUI</span>
           </h1>
-          <p className="text-2xl text-gray-600 mb-12">
-            Réponse garantie sous 2 heures
+            <p className="text-2xl text-gray-600 mb-12">
+            Réponse garantie sous 5 minutes
           </p>
         </div>
 
@@ -450,7 +450,7 @@ export default function CliniqueResilesApp() {
               <span className="text-3xl">🔍</span>
             </div>
             <h3 className="font-bold text-gray-900 mb-2">2. Nous analysons</h3>
-            <p className="text-sm text-gray-600">Sous 2 heures</p>
+            <p className="text-sm text-gray-600">Sous 5 minutes</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -1225,7 +1225,7 @@ export default function CliniqueResilesApp() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Téléphone</h3>
-                    <p className="text-gray-600">01 XX XX XX XX</p>
+                    <p className="text-gray-600">07 53 31 90 64</p>
                     <p className="text-sm text-gray-500">Lun-Ven: 9h-19h | Sam: 9h-13h</p>
                   </div>
                 </div>
@@ -1237,7 +1237,7 @@ export default function CliniqueResilesApp() {
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">contact@clinique-resilies.fr</p>
-                    <p className="text-sm text-gray-500">Réponse sous 24h</p>
+                    <p className="text-sm text-gray-500">Réponse en 5mn</p>
                   </div>
                 </div>
 
@@ -1247,8 +1247,8 @@ export default function CliniqueResilesApp() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Adresse</h3>
-                    <p className="text-gray-600">123 Avenue de la République</p>
-                    <p className="text-gray-600">75011 Paris</p>
+                    <p className="text-gray-600">9, allée Georges Bizet</p>
+                    <p className="text-gray-600">95870 Bezons</p>
                   </div>
                 </div>
               </div>

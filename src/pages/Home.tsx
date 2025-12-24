@@ -32,10 +32,10 @@ export default function Home(){
   }
   return (
     <>
-      {useMeta('Assurance Auto Résilié | La Clinique des Assurances Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 2h.")}
+      {useMeta('Assurance Auto Résilié | La Clinique des Assurances Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 5mn.")}
       {ok && (
         <div role="alert" aria-live="polite" className="fixed top-24 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-xl z-50">
-          Merci ! Nous vous rappelons sous 15mn.
+          Merci ! Nous vous rappelons sous 5mn.
         </div>
       )}
 
@@ -146,7 +146,7 @@ export default function Home(){
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 md:p-12 border border-gray-200">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-2">Devis express</h2>
-            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 2 heures. Plus vous êtes précis, plus notre réponse est rapide.</p>
+            <p className="text-gray-600">Remplissez le formulaire, nous vous rappelons sous 5 minutes. Plus vous êtes précis, plus notre réponse est rapide.</p>
           </div>
           <form onSubmit={onSubmit}>
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -179,7 +179,7 @@ export default function Home(){
               <div className="text-xs mt-1 text-red-600">Si le problème persiste, vérifiez vos variables d'environnement sur Vercel.</div>
             </div>}
             <button disabled={sending} className="w-full bg-urgent-red disabled:opacity-60 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 flex items-center justify-center gap-2 transition shadow-lg" type="submit">
-              <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 15 minutes'}
+              <Phone size={24} /> {sending ? 'Envoi...' : 'Être rappelé sous 5 minutes'}
             </button>
             <p className="text-center text-sm text-gray-500 mt-4">🔒 Vos données sont protégées et conformes RGPD</p>
           </form>
