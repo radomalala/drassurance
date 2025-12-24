@@ -12,7 +12,7 @@ export default function Navigation(){
   return (
     <>
       <div className="bg-urgent-red text-white py-2 px-4 text-center font-bold text-sm">
-        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: 01 XX XX XX XX
+        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: +33 7 53 31 90 64
       </div>
 
       <nav aria-label="Navigation principale" className="bg-white dark:bg-slate-900 shadow-md sticky top-0 z-50">

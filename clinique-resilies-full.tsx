@@ -29,7 +29,7 @@ export default function CliniqueResilesApp() {
   const Navigation = () => (
     <>
       <div className="bg-red-600 text-white py-2 px-4 text-center font-bold text-sm">
-        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: 01 XX XX XX XX
+        🚨 URGENCE RÉSILIATION ? Réponse sous 5mn • Tél: +33 7 53 31 90 64
       </div>
 
       <nav className="bg-white shadow-md sticky top-0 z-50">
@@ -107,15 +107,15 @@ export default function CliniqueResilesApp() {
             <div className="flex flex-col gap-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>01 XX XX XX XX</span>
+                <span>+33 7 53 31 90 64</span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>contact@clinique-resilies.fr</span>
+                <span>sine.sow@prevo.fr</span>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} />
-                <span>Lun-Ven: 9h-19h</span>
+                <span>Lun-Ven: 9h-19h | Sam: 9h-13h</span>
               </div>
             </div>
           </div>
@@ -1225,7 +1225,7 @@ export default function CliniqueResilesApp() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Téléphone</h3>
-                    <p className="text-gray-600">07 53 31 90 64</p>
+                    <p className="text-gray-600">+33 7 53 31 90 64</p>
                     <p className="text-sm text-gray-500">Lun-Ven: 9h-19h | Sam: 9h-13h</p>
                   </div>
                 </div>
@@ -1236,7 +1236,7 @@ export default function CliniqueResilesApp() {
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
-                    <p className="text-gray-600">contact@clinique-resilies.fr</p>
+                    <p className="text-gray-600">sine.sow@prevo.fr</p>
                     <p className="text-sm text-gray-500">Réponse en 5mn</p>
                   </div>
                 </div>
