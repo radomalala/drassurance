@@ -6,9 +6,9 @@ export default function Contact(){
   const [f,setF] = useState({nom:'', email:'', tel:'', sujet:'', message:''})
   const [ok,setOk] = useState(false)
   const onSubmit=(e:React.FormEvent)=>{e.preventDefault(); setOk(true); setTimeout(()=>setOk(false),4000); setF({nom:'',email:'',tel:'',sujet:'',message:''})}
+  useMeta('Contact — La Clinique des Assurances Résiliés', 'Contactez-nous : téléphone, email, horaires. Formulaire de contact disponible.');
   return (
     <div className="py-16 px-4">
-      {useMeta('Contact — La Clinique des Assurances Résiliés', 'Contactez-nous : téléphone, email, horaires. Formulaire de contact disponible.')}      
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Contactez-nous</h1>
         <p className="text-xl text-center text-gray-600 mb-12">Notre équipe est à votre écoute pour répondre à toutes vos questions</p>
