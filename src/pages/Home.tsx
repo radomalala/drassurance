@@ -32,7 +32,7 @@ export default function Home(){
   }
   return (
     <>
-      {useMeta('Assurance Auto Résilié | La Clinique des Assurances Résiliés', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 5mn.")}
+      {useMeta('urgence assurance auto resilie', "Cabinet spécialisé en assurance auto pour conducteurs résiliés, malussés ou refusés. Programme de réhabilitation en 3 niveaux. Devis sous 5mn.")}
       {ok && (
         <div role="alert" aria-live="polite" className="fixed top-24 right-4 bg-green-600 text-white px-6 py-4 rounded-lg shadow-xl z-50">
           Merci ! Nous vous rappelons sous 5mn.
