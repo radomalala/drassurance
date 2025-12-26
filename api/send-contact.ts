@@ -1,13 +1,12 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node'
 import { Resend } from 'resend'
 
-// Serverless function for sending quote request emails via Resend
-// Expects JSON body: { nom, tel, situation, infos }
+// Serverless function for sending contact form emails via Resend
+// Expects JSON body: { nom, email, tel, sujet, message }
 
 const resendApiKey = process.env.RESEND_API_KEY
 const sender = process.env.RESEND_SENDER_EMAIL || 'onboarding@resend.dev'
 const destination = 'sine.sow@prevo.fr'
-const bccDestination = 'ratrimosoaeugene@gmail.com'
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
@@ -25,33 +24,36 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
     if (typeof body === 'string') {
       try { body = JSON.parse(body) } catch { /* ignore parse error */ }
     }
-    const { nom, tel, situation, infos } = body || {}
-    if (!nom || !tel || !situation) {
+    const { nom, email, tel, sujet, message } = body || {}
+    if (!nom || !email || !sujet || !message) {
       res.status(400).json({ error: 'Champs requis manquants' })
       return
     }
 
     const resend = new Resend(resendApiKey)
 
-    const subject = 'Demande de devis'
+    const subject = sujet === 'devis' ? 'Demande de devis via Site Internet' : `Demande de contact - ${sujet}`
     const html = `
       <div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;color:#222">
-        <h2 style="margin-top:0">Demande de devis express</h2>
+        <h2 style="margin-top:0">Demande de contact</h2>
         <p><strong>Nom:</strong> ${escapeHtml(nom)}</p>
-        <p><strong>Téléphone:</strong> ${escapeHtml(tel)}</p>
-        <p><strong>Situation:</strong> ${escapeHtml(situation)}</p>
-        <p><strong>Informations complémentaires:</strong><br />${escapeHtml(infos || '—')}</p>
+        <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+        <p><strong>Téléphone:</strong> ${escapeHtml(tel || '—')}</p>
+        <p><strong>Sujet:</strong> ${escapeHtml(sujet)}</p>
+        <hr style="margin:16px 0" />
+        <p><strong>Message:</strong></p>
+        <p style="white-space:pre-wrap;word-wrap:break-word">${escapeHtml(message)}</p>
         <hr style="margin:24px 0" />
-        <p style="font-size:12px;color:#666">Email envoyé automatiquement depuis le formulaire Devis express.</p>
+        <p style="font-size:12px;color:#666">Email envoyé automatiquement depuis le formulaire de contact du site.</p>
       </div>
     `
 
     const { error } = await resend.emails.send({
       from: sender,
       to: destination,
-      bcc: bccDestination,
       subject,
-      html
+      html,
+      replyTo: email
     })
 
     if (error) {
@@ -72,7 +74,7 @@ function escapeHtml(str: string) {
       case '<': return '&lt;'
       case '>': return '&gt;'
       case '"': return '&quot;'
-      case "'": return '&#39;' // eslint-disable-line quotes
+      case "'": return '&#39;'
       default: return c
     }
   })

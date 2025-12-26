@@ -12,7 +12,7 @@ export default function Home(){
     e.preventDefault();
     setSending(true); setError(undefined)
     try {
-      const resp = await fetch('/api/send-quote', {
+      const resp = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-quote`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
