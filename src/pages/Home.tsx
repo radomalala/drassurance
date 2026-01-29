@@ -160,8 +160,14 @@ export default function Home(){
               </div>
             </div>
             <div className="mb-6">
-              <label className="block text-sm font-semibold text-gray-700 mb-2">Votre situation *</label>
-              <select required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={formData.situation} onChange={e=>setFormData({...formData, situation:e.target.value})}>
+              <label htmlFor="situation-select" className="block text-sm font-semibold text-gray-700 mb-2">Votre situation *</label>
+              <select
+                id="situation-select"
+                required
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                value={formData.situation}
+                onChange={e=>setFormData({...formData, situation:e.target.value})}
+              >
                 <option value="">Sélectionnez votre situation</option>
                 <option value="resilie">Résilié par mon assureur</option>
                 <option value="refuse">Refusé par plusieurs assureurs</option>

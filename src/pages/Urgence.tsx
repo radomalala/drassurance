@@ -13,7 +13,7 @@ export default function Urgence(){
     setLoading(true)
     setError('')
     try {
-      const res = await fetch(`${process.env.VITE_API_BASE_URL}/api/send-urgency`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-urgency`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(f)
@@ -60,7 +60,14 @@ export default function Urgence(){
             <div className="space-y-4 mb-6">
               <input required placeholder="Nom complet *" className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.nom} onChange={e=>setF({...f,nom:e.target.value})} />
               <input required placeholder="Téléphone *" className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.tel} onChange={e=>setF({...f,tel:e.target.value})} />
-              <select required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.situation} onChange={e=>setF({...f,situation:e.target.value})}>
+              <label htmlFor="situation-select" className="sr-only">Votre situation *</label>
+              <select
+                id="situation-select"
+                required
+                className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                value={f.situation}
+                onChange={e=>setF({...f,situation:e.target.value})}
+              >
                 <option value="">Votre situation *</option>
                 <option value="resilie">Résilié</option>
                 <option value="refuse">Refusé</option>

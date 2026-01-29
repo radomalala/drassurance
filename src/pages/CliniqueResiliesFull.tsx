@@ -161,10 +161,10 @@ export default function CliniqueResilesApp() {
             <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
               RÉSILIÉ • MALUSSÉ • REFUSÉ
             </div>
-            <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               On vous assure<br />
               <span className="text-red-600">aujourd hui</span>
-            </h2>
+            </h1>
             <p className="text-xl text-gray-600 mb-8">
               Le seul cabinet qui vous accompagne jusqu à redevenir un profil standard, année après année.
             </p>
@@ -260,6 +260,7 @@ export default function CliniqueResilesApp() {
               <label className="block text-sm font-semibold text-gray-700 mb-2">Votre situation *</label>
               <select 
                 required
+                aria-label="Votre situation"
                 className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-red-600 focus:outline-none transition"
                 value={formData.situation}
                 onChange={(e) => setFormData({...formData, situation: e.target.value})}
@@ -297,12 +298,59 @@ export default function CliniqueResilesApp() {
   );
 
   // Minimal stubs for other pages to keep navigation working in demo
-  const PageUrgence = () => <div className="min-h-[40vh]">Page Urgence (démo)</div>
-  const PageProgramme = () => <div className="min-h-[40vh]">Page Programme (démo)</div>
-  const PageTemoignages = () => <div className="min-h-[40vh]">Page Témoignages (démo)</div>
-  const PageFAQ = () => <div className="min-h-[40vh]">Page FAQ (démo)</div>
-  const PageAPropos = () => <div className="min-h-[40vh]">Page À propos (démo)</div>
-  const PageContact = () => <div className="min-h-[40vh]">Page Contact (démo)</div>
+  const PageUrgence = () => (
+    <div className="min-h-[40vh] py-16 px-4">
+      <div className="max-w-4xl mx-auto text-center">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Urgence résiliation</h1>
+        <p className="text-gray-600">Réponse prioritaire sous 5 minutes. Nous trouvons une solution d'assurance immédiate.</p>
+      </div>
+    </div>
+  )
+
+  const PageProgramme = () => (
+    <div className="min-h-[40vh] py-16 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Notre programme en 3 niveaux</h1>
+        <p className="text-gray-600">Accompagnement progressif pour rétablir votre profil et diminuer vos primes.</p>
+      </div>
+    </div>
+  )
+
+  const PageTemoignages = () => (
+    <div className="min-h-[40vh] py-16 px-4 bg-gray-50">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Témoignages clients</h1>
+        <p className="text-gray-600">Parcours réels de conducteurs réhabilités grâce à notre accompagnement.</p>
+      </div>
+    </div>
+  )
+
+  const PageFAQ = () => (
+    <div className="min-h-[40vh] py-16 px-4">
+      <div className="max-w-4xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">FAQ — Questions fréquentes</h1>
+        <p className="text-gray-600">Réponses aux questions courantes sur la résiliation, le malus et notre programme.</p>
+      </div>
+    </div>
+  )
+
+  const PageAPropos = () => (
+    <div className="min-h-[40vh] py-16 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">À propos — La Clinique des Assurances Résiliés</h1>
+        <p className="text-gray-600">Notre mission : réhabiliter les conducteurs exclus du marché de l'assurance.</p>
+      </div>
+    </div>
+  )
+
+  const PageContact = () => (
+    <div className="min-h-[40vh] py-16 px-4">
+      <div className="max-w-5xl mx-auto">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">Contactez-nous</h1>
+        <p className="text-gray-600">Par téléphone ou via notre formulaire, notre équipe vous répond rapidement.</p>
+      </div>
+    </div>
+  )
 
   return (
     <div className="min-h-screen bg-white">

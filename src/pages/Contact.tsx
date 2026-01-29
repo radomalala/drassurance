@@ -13,7 +13,7 @@ export default function Contact(){
     setLoading(true)
     setError('')
     try {
-      const res = await fetch(`${process.env.VITE_API_BASE_URL}/api/send-contact`, {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/api/send-contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(f)
@@ -43,19 +43,43 @@ export default function Contact(){
               <form onSubmit={onSubmit} className="space-y-4">
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Nom complet *</label>
-                  <input required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.nom} onChange={e=>setF({...f,nom:e.target.value})} />
+                  <input
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                    value={f.nom}
+                    onChange={e=>setF({...f,nom:e.target.value})}
+                    placeholder="Votre nom complet"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Email *</label>
-                  <input type="email" required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.email} onChange={e=>setF({...f,email:e.target.value})} />
+                  <input
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                    value={f.email}
+                    onChange={e=>setF({...f,email:e.target.value})}
+                    placeholder="Votre adresse email"
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Téléphone</label>
-                  <input className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.tel} onChange={e=>setF({...f,tel:e.target.value})} />
+                  <input
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                    value={f.tel}
+                    onChange={e=>setF({...f,tel:e.target.value})}
+                    placeholder="Votre numéro de téléphone"
+                  />
                 </div>
                 <div>
-                  <label className="block text-sm font-semibold text-gray-700 mb-2">Sujet *</label>
-                  <select required className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.sujet} onChange={e=>setF({...f,sujet:e.target.value})}>
+                  <label htmlFor="contact-sujet" className="block text-sm font-semibold text-gray-700 mb-2">Sujet *</label>
+                  <select
+                    id="contact-sujet"
+                    required
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                    value={f.sujet}
+                    onChange={e=>setF({...f,sujet:e.target.value})}
+                  >
                     <option value="">Sélectionnez un sujet</option>
                     <option value="devis">Demande de devis</option>
                     <option value="info">Information générale</option>
@@ -66,7 +90,14 @@ export default function Contact(){
                 </div>
                 <div>
                   <label className="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
-                  <textarea required rows={4} className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none" value={f.message} onChange={e=>setF({...f,message:e.target.value})}></textarea>
+                  <textarea
+                    required
+                    rows={4}
+                    className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-urgent-red focus:outline-none"
+                    value={f.message}
+                    onChange={e=>setF({...f,message:e.target.value})}
+                    placeholder="Votre message"
+                  ></textarea>
                 </div>
                 <button type="submit" disabled={loading} className="w-full bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 transition disabled:opacity-50 disabled:cursor-not-allowed">{loading ? 'Envoi en cours...' : 'Envoyer le message'}</button>
               </form>
