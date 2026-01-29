@@ -3,9 +3,9 @@ import { useMeta } from '../hooks/useMeta'
 import { CheckCircle } from 'lucide-react'
 
 export default function Programme(){
+  useMeta('Programme habilitation Assurantielle en 3 Niveaux', 'Découvrez notre parcours : de résilié à profil standard en 3 niveaux. Accompagnement personnalisé.')
   return (
     <div className="py-16 px-4">
-      {useMeta('Programme de Réhabilitation Assurantielle en 3 Niveaux', 'Découvrez notre parcours : de résilié à profil standard en 3 niveaux. Accompagnement personnalisé.')}
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">Comment fonctionne notre programme ?</h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">Un accompagnement unique en France pour passer de « résilié » à « assuré normalement ». Découvrez aussi nos <a href="/temoignages" className="text-urgent-red underline">témoignages</a> et les <a href="/types-resiliation" className="text-urgent-red underline">types de résiliation</a>.</p>
