@@ -43,10 +43,10 @@ export default function Home(){
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-block bg-red-100 text-red-700 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-              Assurance Résilié, Malussé ou Refusé
+              Résilié ? Malussé ? ou Refusé?
             </div>
             <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-              On vous assure dès aujourd'hui<br />
+              PREVO assure ceux que les autres refusent - <br />
               <span className="text-urgent-red">mieux et moins chère</span>
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">

@@ -1028,7 +1028,7 @@ export default function CliniqueResilesApp() {
     <div className="py-16 px-4">
       <div className="max-w-5xl mx-auto">
         <h1 className="text-5xl font-bold text-center text-gray-900 mb-6">
-          La première clinique assurantielle de France
+          Spécialiste en assurance Résilié, Malussé ou Refusé
         </h1>
         <p className="text-xl text-center text-gray-600 mb-16 max-w-3xl mx-auto">
           Nous avons créé un concept unique: accompagner les conducteurs en difficulté jusqu à leur réhabilitation complète
