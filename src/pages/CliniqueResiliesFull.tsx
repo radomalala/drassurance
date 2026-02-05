@@ -123,10 +123,10 @@ export default function CliniqueResilesApp() {
           <div>
             <h4 className="font-bold mb-4">Légal</h4>
             <div className="flex flex-col gap-2 text-sm text-gray-400">
-              <a href="#" className="hover:text-white">Mentions légales</a>
-              <a href="#" className="hover:text-white">Politique de confidentialité</a>
-              <a href="#" className="hover:text-white">CGU</a>
-              <a href="#" className="hover:text-white">Gestion des cookies</a>
+              <a href="/mentions-legales" className="hover:text-white">Mentions légales</a>
+              <a href="/politique-confidentialite" className="hover:text-white">Politique de confidentialité</a>
+              <a href="/cgu" className="hover:text-white">CGU</a>
+              <a href="/gestion-cookies" className="hover:text-white">Gestion des cookies</a>
             </div>
           </div>
         </div>

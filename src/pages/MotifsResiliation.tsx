@@ -4,6 +4,7 @@ import { AlertCircle, CreditCard, Wrench, TrendingDown, FileText, Shield } from 
 import { Link } from 'react-router-dom'
 
 export default function MotifsResiliation(){
+  useMeta('Motifs de Résiliation Assurance Auto - PREVO Assurance', 'Comprendre les motifs de résiliation assurance auto et trouver une solution. PREVO assure les conducteurs résiliés.')
   const motifs = [
     {
       id: 'non-paiement',
@@ -59,7 +60,6 @@ export default function MotifsResiliation(){
 
   return (
     <div className="py-16 px-4">
-      {useMeta('Motifs de Résiliation Assurance Auto - PREVO Assurance', 'Comprendre les motifs de résiliation assurance auto et trouver une solution. PREVO assure les conducteurs résiliés.')}
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6 text-center">

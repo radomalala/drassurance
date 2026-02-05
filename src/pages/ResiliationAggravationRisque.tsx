@@ -7,6 +7,8 @@ export default function ResiliationAggravationRisque(){
   const [sending, setSending] = useState(false)
   const [error, setError] = useState<string|undefined>(undefined)
 
+  useMeta('Assurance Auto Après Aggravation du Risque - PREVO', 'Résilié suite à une aggravation du risque ? Changement d\'utilisation du véhicule ? PREVO vous assure en 15 minutes.')
+
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSending(true); setError(undefined)
@@ -27,7 +29,6 @@ export default function ResiliationAggravationRisque(){
 
   return (
     <div className="py-16 px-4">
-      {useMeta('Assurance Auto Après Aggravation du Risque - PREVO', 'Résilié suite à une aggravation du risque ? Changement d\'utilisation du véhicule ? PREVO vous assure en 15 minutes.')}
       <div className="max-w-5xl mx-auto">
         <div className="mb-16">
           <a href="/motifs-resiliation" className="text-urgent-red hover:underline mb-4 inline-block">← Retour aux motifs de résiliation</a>

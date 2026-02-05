@@ -23,6 +23,10 @@ import TaxiVTC from './pages/TaxiVTC'
 import VehiculeSansPermis from './pages/VehiculeSansPermis'
 import Blog from './pages/Blog'
 import BlogArticle from './pages/BlogArticle'
+import MentionsLegales from './pages/MentionsLegales'
+import PolitiqueConfidentialite from './pages/PolitiqueConfidentialite'
+import CGU from './pages/CGU'
+import GestionCookies from './pages/GestionCookies'
 
 export default function App(){
   return (
@@ -53,6 +57,10 @@ export default function App(){
             <Route path="/blog/:id" element={<BlogArticle />} />
             <Route path="/apropos" element={<APropos />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/mentions-legales" element={<MentionsLegales />} />
+            <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+            <Route path="/cgu" element={<CGU />} />
+            <Route path="/gestion-cookies" element={<GestionCookies />} />
           </Routes>
         </main>
         <Footer />
