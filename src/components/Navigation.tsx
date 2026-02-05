@@ -1,13 +1,23 @@
 import React, { useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
-import { Menu, X } from 'lucide-react'
+import { Menu, X, ChevronDown } from 'lucide-react'
 import ThemeToggle from './ThemeToggle'
 
 export default function Navigation(){
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [motifOpen, setMotifOpen] = useState(false)
 
   const linkCls = ({ isActive }: {isActive:boolean}) =>
     `hover:text-urgent-red ${isActive ? 'text-urgent-red' : 'text-gray-700'}`
+
+  const motifs = [
+    { label: 'Non-paiement des primes', path: '/resiliation/non-paiement' },
+    { label: 'Retrait/Suspension de permis', path: '/resiliation/retrait-suspension' },
+    { label: 'Sinistres répétitifs', path: '/resiliation/sinistres-repetitifs' },
+    { label: 'Aggravation du risque', path: '/resiliation/aggravation-risque' },
+    { label: 'Fausse déclaration', path: '/resiliation/fausse-declaration' },
+    { label: 'Non-respect des clauses', path: '/resiliation/non-respect-clauses' },
+  ]
 
   return (
     <>
@@ -28,9 +38,28 @@ export default function Navigation(){
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
             <NavLink to="/" className={linkCls}>Accueil</NavLink>
             <NavLink to="/urgence-resiliation" className={linkCls}>Urgences</NavLink>
-            <NavLink to="/types-resiliation" className={linkCls}>Types de résiliation</NavLink>
+            
+            {/* Accordéon Motifs de résiliation */}
+            <div className="relative group">
+              <button className="hover:text-urgent-red text-gray-700 flex items-center gap-1 py-2">
+                Motifs de résiliation
+                <ChevronDown size={16} className="group-hover:rotate-180 transition" />
+              </button>
+              <div className="absolute left-0 mt-0 hidden group-hover:block bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-lg shadow-lg z-50 min-w-max">
+                {motifs.map((motif) => (
+                  <NavLink
+                    key={motif.path}
+                    to={motif.path}
+                    className="block px-4 py-3 hover:bg-urgent-red hover:text-white text-gray-700 dark:text-gray-300 dark:hover:text-white first:rounded-t-lg last:rounded-b-lg whitespace-nowrap"
+                  >
+                    {motif.label}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+            
+            <NavLink to="/types-vehicules" className={linkCls}>Types de véhicules</NavLink>
             <NavLink to="/programme" className={linkCls}>Programme</NavLink>
-            <NavLink to="/temoignages" className={linkCls}>Témoignages</NavLink>
             <NavLink to="/faq" className={linkCls}>FAQ</NavLink>
             <NavLink to="/apropos" className={linkCls}>À propos</NavLink>
             <NavLink to="/contact" className={linkCls}>Contact</NavLink>
@@ -46,12 +75,37 @@ export default function Navigation(){
 
         {mobileOpen && (
           <div className="md:hidden bg-white dark:bg-slate-900 border-t border-gray-200 dark:border-slate-700">
-            <div className="flex flex-col py-4 px-4 gap-4">
+            <div className="flex flex-col py-4 px-4 gap-2">
               <NavLink onClick={()=>setMobileOpen(false)} to="/" className="text-left py-2 hover:text-urgent-red">Accueil</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/urgence-resiliation" className="text-left py-2 hover:text-urgent-red">Urgences</NavLink>
-              <NavLink onClick={()=>setMobileOpen(false)} to="/types-resiliation" className="text-left py-2 hover:text-urgent-red">Types de résiliation</NavLink>
+              
+              {/* Accordéon mobile Motifs */}
+              <div className="border-t border-gray-200 dark:border-slate-700 pt-2 mt-2">
+                <button
+                  onClick={() => setMotifOpen(!motifOpen)}
+                  className="w-full text-left py-2 hover:text-urgent-red flex items-center justify-between"
+                >
+                  <span>Motifs de résiliation</span>
+                  <ChevronDown size={16} className={`transition ${motifOpen ? 'rotate-180' : ''}`} />
+                </button>
+                {motifOpen && (
+                  <div className="bg-gray-50 dark:bg-slate-800 rounded-lg mt-2 ml-4">
+                    {motifs.map((motif) => (
+                      <NavLink
+                        key={motif.path}
+                        onClick={()=>{setMobileOpen(false); setMotifOpen(false)}}
+                        to={motif.path}
+                        className="block px-4 py-2 hover:bg-urgent-red hover:text-white text-gray-700 dark:text-gray-300 dark:hover:text-white text-sm"
+                      >
+                        {motif.label}
+                      </NavLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
+              <NavLink onClick={()=>setMobileOpen(false)} to="/types-vehicules" className="text-left py-2 hover:text-urgent-red">Types de véhicules</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/programme" className="text-left py-2 hover:text-urgent-red">Programme</NavLink>
-              <NavLink onClick={()=>setMobileOpen(false)} to="/temoignages" className="text-left py-2 hover:text-urgent-red">Témoignages</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/faq" className="text-left py-2 hover:text-urgent-red">FAQ</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/apropos" className="text-left py-2 hover:text-urgent-red">À propos</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/contact" className="text-left py-2 hover:text-urgent-red">Contact</NavLink>

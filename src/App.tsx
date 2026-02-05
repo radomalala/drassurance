@@ -10,6 +10,17 @@ import FAQ from './pages/FAQ'
 import APropos from './pages/APropos'
 import Contact from './pages/Contact'
 import TypesResiliation from './pages/TypesResiliation'
+import MotifsResiliation from './pages/MotifsResiliation'
+import ResiliationNonPaiement from './pages/ResiliationNonPaiement'
+import ResiliationRetraitSuspension from './pages/ResiliationRetraitSuspension'
+import ResiliationSinistres from './pages/ResiliationSinistres'
+import ResiliationAggravationRisque from './pages/ResiliationAggravationRisque'
+import ResiliationFausseDeclaration from './pages/ResiliationFausseDeclaration'
+import ResiliationNonRespectClauses from './pages/ResiliationNonRespectClauses'
+import TypesVehicules from './pages/TypesVehicules'
+import VoitureParticuliere from './pages/VoitureParticuliere'
+import TaxiVTC from './pages/TaxiVTC'
+import VehiculeSansPermis from './pages/VehiculeSansPermis'
 
 export default function App(){
   return (
@@ -22,6 +33,17 @@ export default function App(){
             <Route path="/" element={<Home />} />
             <Route path="/urgence-resiliation" element={<Urgence />} />
             <Route path="/types-resiliation" element={<TypesResiliation />} />
+            <Route path="/motifs-resiliation" element={<MotifsResiliation />} />
+            <Route path="/resiliation/non-paiement" element={<ResiliationNonPaiement />} />
+            <Route path="/resiliation/retrait-suspension" element={<ResiliationRetraitSuspension />} />
+            <Route path="/resiliation/sinistres-repetitifs" element={<ResiliationSinistres />} />
+            <Route path="/resiliation/aggravation-risque" element={<ResiliationAggravationRisque />} />
+            <Route path="/resiliation/fausse-declaration" element={<ResiliationFausseDeclaration />} />
+            <Route path="/resiliation/non-respect-clauses" element={<ResiliationNonRespectClauses />} />
+            <Route path="/types-vehicules" element={<TypesVehicules />} />
+            <Route path="/vehicules/voiture" element={<VoitureParticuliere />} />
+            <Route path="/vehicules/taxi-vtc" element={<TaxiVTC />} />
+            <Route path="/vehicules/vehicule-sans-permis" element={<VehiculeSansPermis />} />
             <Route path="/programme" element={<Programme />} />
             <Route path="/temoignages" element={<Temoignages />} />
             <Route path="/faq" element={<FAQ />} />
