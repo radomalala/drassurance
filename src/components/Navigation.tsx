@@ -60,6 +60,7 @@ export default function Navigation(){
             
             <NavLink to="/types-vehicules" className={linkCls}>Types de véhicules</NavLink>
             <NavLink to="/programme" className={linkCls}>Programme</NavLink>
+            <NavLink to="/blog" className={linkCls}>Blog</NavLink>
             <NavLink to="/faq" className={linkCls}>FAQ</NavLink>
             <NavLink to="/apropos" className={linkCls}>À propos</NavLink>
             <NavLink to="/contact" className={linkCls}>Contact</NavLink>
@@ -106,6 +107,7 @@ export default function Navigation(){
               
               <NavLink onClick={()=>setMobileOpen(false)} to="/types-vehicules" className="text-left py-2 hover:text-urgent-red">Types de véhicules</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/programme" className="text-left py-2 hover:text-urgent-red">Programme</NavLink>
+              <NavLink onClick={()=>setMobileOpen(false)} to="/blog" className="text-left py-2 hover:text-urgent-red">Blog</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/faq" className="text-left py-2 hover:text-urgent-red">FAQ</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/apropos" className="text-left py-2 hover:text-urgent-red">À propos</NavLink>
               <NavLink onClick={()=>setMobileOpen(false)} to="/contact" className="text-left py-2 hover:text-urgent-red">Contact</NavLink>

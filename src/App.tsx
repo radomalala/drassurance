@@ -21,6 +21,8 @@ import TypesVehicules from './pages/TypesVehicules'
 import VoitureParticuliere from './pages/VoitureParticuliere'
 import TaxiVTC from './pages/TaxiVTC'
 import VehiculeSansPermis from './pages/VehiculeSansPermis'
+import Blog from './pages/Blog'
+import BlogArticle from './pages/BlogArticle'
 
 export default function App(){
   return (
@@ -47,6 +49,8 @@ export default function App(){
             <Route path="/programme" element={<Programme />} />
             <Route path="/temoignages" element={<Temoignages />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogArticle />} />
             <Route path="/apropos" element={<APropos />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
