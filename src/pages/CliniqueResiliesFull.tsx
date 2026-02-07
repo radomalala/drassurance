@@ -111,7 +111,7 @@ export default function CliniqueResilesApp() {
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>sine.sow@prevo.fr</span>
+                <a href="mailto:sine.sow@prevo.fr"><span>sine.sow@prevo.fr</span></a>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} />

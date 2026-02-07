@@ -36,7 +36,7 @@ export default function Urgence(){
         <div className="mb-8">
           <div className="inline-block bg-urgent-red text-white px-6 py-3 rounded-full text-lg font-bold mb-6">🚨 Urgence résiliation</div>
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">Résilié ?<br/><span className="text-urgent-red">On vous assure dès aujourd'hui mieux et moins chère</span></h1>
-          <p className="text-2xl text-gray-600 mb-12">Réponse garantie sous 5 minutes</p>
+          <p className="text-2xl text-gray-600 mb-12">Réponse garantie : <a href="tel:+33753319064">+33 7 53 31 90 64 </a></p>
         </div>
         <div className="grid md:grid-cols-4 gap-4 mb-12">
           {[
@@ -54,7 +54,7 @@ export default function Urgence(){
             </div>
           ))}
         </div>
-        <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-left">
+        {/* <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 text-left">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Formulaire express urgence</h2>
           <form onSubmit={onSubmit}>
             <div className="space-y-4 mb-6">
@@ -76,7 +76,7 @@ export default function Urgence(){
             </div>
             <button type="submit" disabled={loading} className="w-full bg-urgent-red text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-red-700 disabled:opacity-50 disabled:cursor-not-allowed">🚨 {loading ? 'Envoi en cours...' : 'Urgence : me rappeler maintenant'}</button>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   )

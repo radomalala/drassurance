@@ -33,11 +33,11 @@ export default function Footer(){
             <div className="flex flex-col gap-2 text-sm text-gray-400">
               <div className="flex items-center gap-2">
                 <Phone size={16} />
-                <span>+33 7 53 31 90 64</span>
+                <a href="tel:+33753319064"><span>+33 7 53 31 90 64</span></a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail size={16} />
-                <span>sine.sow@prevo.fr</span>
+                <a href="mailto:sine.sow@prevo.fr"><span>sine.sow@prevo.fr</span></a>
               </div>
               <div className="flex items-center gap-2">
                 <Clock size={16} />
