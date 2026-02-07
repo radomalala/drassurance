@@ -8,13 +8,13 @@ type Props = {
 }
 
 export default function Mascotte({ size = 'lg', caption, rounded = true, className = '' }: Props){
-  const dims = size === 'sm' ? 'w-24 h-24' : size === 'md' ? 'w-40 h-40' : 'w-56 h-56'
+  const dims = size === 'sm' ? 'w-31 h-31' : size === 'md' ? 'w-47 h-47' : 'w-63 h-63'
   return (
     <figure className={`flex flex-col items-center ${className}`}>
       <div className={`relative ${dims}`}>
         <img
-          src="/mockups/mascotte.PNG"
-          alt="Mascotte de La Clinique des Assurances Résiliés"
+          src="/mockups/home.jpg"
+          alt="Assurances Auto Résiliés Malussé urgence"
           className={`object-contain ${rounded ? 'rounded-2xl' : ''} w-full h-full shadow-lg bg-white dark:bg-slate-900`}
           loading="eager"
         />

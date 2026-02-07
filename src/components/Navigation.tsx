@@ -28,11 +28,11 @@ export default function Navigation(){
       <nav aria-label="Navigation principale" className="bg-white dark:bg-slate-900 shadow-md sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-3">
-            <img src="/mockups/icone_logo.PNG" alt="La Clinique des Assurances Résiliés" className="w-12 h-12" />
-            <div>
-              <h1 className="text-xl font-bold text-gray-800 dark:text-white">LA CLINIQUE</h1>
-              <p className="text-xs text-gray-600 dark:text-gray-300">des Résiliés</p>
-            </div>
+            <img src="/mockups/icone_logo.PNG" alt="Assurances Auto Résiliés" className="w-60 h-24" />
+            {/* <div>
+              <h1 className="text-xl font-bold text-gray-800 dark:text-white">Spécialiste en assurance</h1>
+              <p className="text-xl text-gray-600 dark:text-gray-300">auto résilié</p>
+            </div> */}
           </Link>
 
           <div className="hidden md:flex items-center gap-6 text-sm font-medium">
