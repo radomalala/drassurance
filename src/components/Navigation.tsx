@@ -123,7 +123,7 @@ export default function Navigation(){
           <p className="text-sm md:text-base text-gray-800 dark:text-gray-200 text-center md:text-left">
             Assurance résilié dès <span className="font-bold text-urgent-red">16&nbsp;€/mois*</span> • Devis en 5&nbsp;min
           </p>
-          <a href="/#formulaire" className="inline-flex items-center justify-center bg-urgent-red text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700 transition">
+          <a href="/contact" className="inline-flex items-center justify-center bg-urgent-red text-white px-4 py-2 rounded-md font-semibold hover:bg-red-700 transition">
             Demander un devis rapide
           </a>
         </div>
